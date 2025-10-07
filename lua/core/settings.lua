@@ -10,7 +10,7 @@ vim.o.showmode = false
 
 -- Clipboard (schedule avoids startup cost on some UIs)
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+	vim.o.clipboard = "unnamedplus"
 end)
 
 -- Indent / UI comfort
@@ -19,6 +19,7 @@ vim.o.undofile = true
 vim.o.signcolumn = "yes"
 vim.o.cursorline = true
 vim.o.scrolloff = 10
+vim.o.wrap = false
 
 -- Search behavior
 vim.o.ignorecase = true
@@ -41,4 +42,3 @@ vim.o.inccommand = "split"
 
 -- Safer quits (confirm to save)
 vim.o.confirm = true
-
