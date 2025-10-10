@@ -20,6 +20,7 @@ vim.o.signcolumn = "yes"
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.wrap = false
+vim.o.termguicolors = true
 
 -- Search behavior
 vim.o.ignorecase = true
