@@ -1,3 +1,4 @@
+```text
 /home/trevorsutherland/.config/nvim-mini/
 ├── lua/
 │   ├── config/
@@ -29,3 +30,4 @@
 └── lazy-lock.json
 
 6 directories, 23 files
+```
