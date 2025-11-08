@@ -59,7 +59,8 @@ map("x", "p", [["_dP]], { desc = "Paste over (keep default register)" })
 map("n", "<leader>cw", [[:%s/\s\+$//e<CR>]], { desc = "Clear trailing whitespace" })
 
 -- ── Toggles  <leader>t* ────────────────────────────────────────────
-map("n", "<leader>tr", function() vim.o.relativenumber = not vim.o.relativenumber end, { desc = "[T]oggle → [R]elative numbers" })
+map("n", "<leader>tr", function() vim.o.relativenumber = not vim.o.relativenumber end,
+	{ desc = "[T]oggle → [R]elative numbers" })
 map("n", "<leader>ts", function() vim.o.spell = not vim.o.spell end, { desc = "[T]oggle → [S]pell" })
 
 -- ── UX nudges (keep if you like) ───────────────────────────────────
@@ -70,9 +71,9 @@ map("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- ── Yank highlight ─────────────────────────────────────────────────
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight on yank",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function() vim.hl.on_yank() end,
+	desc = "Highlight on yank",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function() vim.hl.on_yank() end,
 })
 
 -- ── LSP jumps / actions (tooling-agnostic) ─────────────────────────
@@ -86,3 +87,12 @@ map("n", "<leader>lr", vim.lsp.buf.rename, { desc = "[L]SP: [R]ename symbol" })
 map({ "n", "x" }, "<leader>la", vim.lsp.buf.code_action, { desc = "[L]SP: Code [A]ction" })
 map("n", "<leader>lk", vim.lsp.buf.signature_help, { desc = "[L]SP: Signature help" })
 
+
+-- ── Files → Project Tree ─────────────────────────────────────────────────
+vim.keymap.set("n", "<leade>ft", function()
+	require("config.project_tree").write_tree({})
+end, { desc = "[F]iles → Project [T]ree" })
+
+vim.keymap.set("n", "<leader>fT", function()
+	vim.cmd("ProjectTree!")
+end, { desc = "[F]iles → Project Tree (Markdown)" })
