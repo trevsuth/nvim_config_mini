@@ -1,5 +1,9 @@
 ```text
 /home/trevorsutherland/.config/nvim-mini/
+├── docs/
+│   ├── directories.md
+│   ├── plugins.md
+│   └── README.md
 ├── lua/
 │   ├── config/
 │   │   ├── lazy.lua
@@ -21,13 +25,15 @@
 │       ├── mini.lua
 │       ├── nightfox.lua
 │       ├── overseer.lua
+│       ├── sidekick_codex.lua
 │       ├── testing.lua
 │       ├── treesitter.lua
 │       ├── ui.lua
 │       ├── uv.lua
 │       └── venvselect.lua
 ├── init.lua
-└── lazy-lock.json
+├── lazy-lock.json
+└── PROJECT_TREE.md
 
-6 directories, 23 files
+7 directories, 28 files
 ```
